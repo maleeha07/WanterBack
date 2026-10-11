@@ -1,0 +1,15 @@
+# C:\lost_and_found\.gitignore
+# Editor and OS files
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Secrets and local files
+.env
+.env.*
+*.log
+
+# Tools you may add later
+node_modules/

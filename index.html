@@ -1,0 +1,61 @@
+<!-- C:\lost_and_found\index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wanderback</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <div>
+            <h1>Wanderback</h1>
+            <p>Helping travelers find their way back to what matters.</p>
+          </div>
+        </div>
+        <div class="header-note">
+          <p class="eyebrow">A little kindness travels far</p>
+          <p>Share a report. Find a connection. Help someone get home with what they lost.</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tab-bar" aria-label="Main navigation">
+      <button type="button" class="tab active" data-tab="home" aria-current="page"><span class="tab-icon" aria-hidden="true">⌂</span><span>Browse</span></button>
+      <button type="button" class="tab" data-tab="lost"><span class="tab-icon" aria-hidden="true">⌕</span><span>Lost item</span></button>
+      <button type="button" class="tab" data-tab="found"><span class="tab-icon" aria-hidden="true">＋</span><span>Found item</span></button>
+      <button type="button" class="tab" data-tab="people"><span class="tab-icon" aria-hidden="true">♡</span><span>People</span></button>
+      <button type="button" class="tab" data-tab="account"><span class="tab-icon" aria-hidden="true">◉</span><span>Account</span></button>
+    </nav>
+
+    <main>
+      <section id="view-home" class="view active"></section>
+      <section id="view-lost" class="view"></section>
+      <section id="view-found" class="view"></section>
+      <section id="view-people" class="view"></section>
+      <section id="view-account" class="view"></section>
+    </main>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="loading" class="loading" aria-hidden="true"><div class="spinner" role="status" aria-label="Loading"></div></div>
+
+  <script src="config.js"></script>
+  <script src="db.js"></script>
+  <script src="matcher.js"></script>
+  <script src="ui.js"></script>
+  <script src="screens.js"></script>
+  <script src="forms.js"></script>
+  <script src="account.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
